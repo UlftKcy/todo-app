@@ -1,0 +1,16 @@
+.navbar{
+    background-color: #0353a4;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #ffff;
+    font-weight: bold;
+}
+.navbar-items{
+    display: flex;
+}
+.navbar-items li{
+    margin-left: 1rem;
+}
