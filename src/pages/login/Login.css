@@ -1,8 +1,14 @@
 .login-wrapper {
-  width: 50%;
+  width: 30%;
   border: 1px solid #0353a4;
   border-radius: 8px;
-  padding: 3rem;
+  padding: 1rem;
+  margin: 20px auto;
+}
+@media (max-width:992px) {
+  .login-wrapper {
+    width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -13,7 +19,7 @@
 
 @media (max-width: 600px) {
   .login-wrapper {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -24,6 +30,9 @@
   border-radius: 8px;
   outline: none;
   margin: 10px 0;
+}
+.user-name:focus{
+  outline: 1px solid #a7bdd4;
 }
 
 .btn-wrapper {
@@ -67,4 +76,8 @@ i {
   font-weight: bold;
   color: #0466c8;
   font-size: 0.7rem;
+}
+.validation{
+  font-size: 0.8rem;
+  color: red;
 }

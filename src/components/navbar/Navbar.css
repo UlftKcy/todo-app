@@ -14,3 +14,9 @@
 .navbar-items li{
     margin-left: 1rem;
 }
+.logout{
+    background-color: transparent;
+    border: 0;
+    color: #ffff;
+    font-size: 1.2rem;
+}

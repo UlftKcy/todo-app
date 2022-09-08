@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
-const Dashboard = () => {
+const Dashboard = ({setUsername,username}) => {
+  useEffect(()=>{
+    const loggedInUser = localStorage.getItem("username");
+    const foundUser = JSON.parse(loggedInUser);
+    setUsername(foundUser);
+  },[username])
   return (
-    <div>Dashboard</div>
+    <div></div>
   )
 }
 
