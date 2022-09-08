@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import Todos from '../../components/todo/Todos';
+import "./Dashboard.css";
 
 const Dashboard = ({setUsername,username}) => {
   useEffect(()=>{
@@ -7,7 +9,9 @@ const Dashboard = ({setUsername,username}) => {
     setUsername(foundUser);
   },[username])
   return (
-    <div></div>
+    <div className='dashboard'>
+      <Todos/>
+    </div>
   )
 }
 

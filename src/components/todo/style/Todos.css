@@ -1,0 +1,44 @@
+/* Todos style */
+.todo-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* todoinput style */
+
+.todo-input-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.to-do{
+    width: 100%;
+    padding: 0.8rem 2.5rem;
+    border: 0;
+    border-radius: 0.8rem;
+    outline: none;
+    margin: 10px;
+  }
+  .to-do:focus{
+    outline: 1px solid #B1D7B4;
+}
+#btn-add-todo {
+    border: 0;
+    padding: 0.8rem 1.5rem;
+    background-color: #00C897;
+    color: #ffff;
+    border-radius:1rem;
+    cursor: pointer;
+    transition: all ease-in-out;
+    font-weight: bold;
+  }
+  #btn-add-todo:hover {
+    background-color: #019267;
+  }
+  #btn-add-todo i{
+    margin-right: 0;
+  }
