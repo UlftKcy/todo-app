@@ -1,25 +1,31 @@
 import React, { useId, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { createTodoItem } from '../../features/todos/toDoSlice';
 
 const ToDoInput = () => {
   const dispatch = useDispatch();
-  const [toDoItem,setToDoItem] = useState({
-    id:useId(),
-    content:"",
-    isCompleted:false,
+  const [errorShow, setErrorShow] = useState(false);
+  const [toDoItem, setToDoItem] = useState({
+    id: useId(),
+    content: "",
+    isCompleted: false,
   });
-  const handleNewToDo = (e)=>{
-    const {name,value} = e.target; 
-    setToDoItem({...toDoItem,[name]:value});
+  const handleNewToDo = (e) => {
+    setErrorShow(false);
+    const { value } = e.target;
+    setToDoItem({ ...toDoItem, content: value });
   }
-  const AddToDo = ()=>{
-    console.log(toDoItem)
+  const AddToDo = () => {
+    return toDoItem.content ? dispatch(createTodoItem(toDoItem)) : setErrorShow(true);
   }
   return (
-    <div className='todo-input-wrapper'>
-      <input onChange={handleNewToDo} value={toDoItem.content} type="text" name="toDoİtem" id="toDoİtem" className='to-do' placeholder='Enter a todo...' />
-      <button id='btn-add-todo' onClick={AddToDo}><i className="fa-solid fa-plus"></i></button>
-    </div>
+    <>
+      {errorShow && <div className='error'>Please enter a todo</div>}
+      <div className='todo-input-wrapper'>
+        <input onChange={handleNewToDo} type="text" name="toDoİtem" id="toDoİtem" className='to-do' placeholder='Enter a todo...' />
+        <button id='btn-add-todo' onClick={AddToDo}><i className="fa-solid fa-plus"></i></button>
+      </div>
+    </>
   )
 }
 
