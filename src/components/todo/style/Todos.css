@@ -93,6 +93,12 @@
 .btn-del {
   color: #0353a4;
 }
+.btn-update{
+  color: #019267;
+}
+.btn-update:hover{
+  color: #00C897;
+}
 
 .todo-check {
   margin-right: 15px;
@@ -110,4 +116,13 @@ input[type='radio']:after {
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
+}
+
+.update-todo{
+  width: 100%;
+  padding: 0 1.8rem;
+  border: 0;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: transparent;
 }
