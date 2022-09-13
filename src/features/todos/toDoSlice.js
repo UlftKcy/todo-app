@@ -76,9 +76,18 @@ const toDoSlice = createSlice({
             state.error = "Error update todo";
         });
 
+        builder.addCase(deleteTodoItem.pending, (state, action) => {
+            state.loading = true;
+            state.error = "";
+        });
         builder.addCase(deleteTodoItem.fulfilled, (state, action) => {
+            state.loading = false;
             let index = state.todo_items.findIndex(todo_item => todo_item.id === action.payload.id)
             state.todo_items.splice(index, 1);
+        });
+        builder.addCase(deleteTodoItem.rejected, (state, action) => {
+            state.loading = false;
+            state.error = "Error delete todo";
         });
     }
 })

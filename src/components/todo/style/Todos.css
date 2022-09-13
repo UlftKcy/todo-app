@@ -32,7 +32,7 @@
 #btn-add-todo {
   border: 0;
   padding: 0.8rem 1.5rem;
-  background-color: #00C897;
+  background-color: #019267;
   color: #ffff;
   border-radius: 1rem;
   cursor: pointer;
@@ -41,15 +41,17 @@
 }
 
 #btn-add-todo:hover {
-  background-color: #019267;
+  background-color: #069e70;
 }
 
 #btn-add-todo i {
   margin-right: 0;
 }
-.error{
+
+.error {
   color: red;
-  font-size:1rem;
+  font-size: 0.8rem;
+  margin:5px 0;
 }
 
 .todo-list-wrapper {
@@ -67,7 +69,7 @@
   padding: 0.7rem;
   border: 1px solid #8ba4bc;
   border-radius: 0.8rem;
-  margin-bottom: 10px;
+  margin: 10px 0;
   transition: all ease-in-out;
 }
 
@@ -93,18 +95,20 @@
 .btn-del {
   color: #0353a4;
 }
-.btn-update{
+
+.btn-update {
   color: #019267;
 }
-.btn-update:hover{
+
+.btn-update:hover {
   color: #00C897;
 }
 
 .todo-check {
-  margin-right: 15px;
+  margin-right: 1.5rem;
 }
 
-input[type='radio']:after {
+.incompleted:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -118,11 +122,32 @@ input[type='radio']:after {
   border: 2px solid white;
 }
 
-.update-todo{
+.completed:before {
+  width: 1.5rem;
+  height:1.5rem;
+  position: relative;
+  top: -4px;
+  left: -1px;
+  content:'\2713';
+  display:inline-block;
+  line-height: 1.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  color: #ffff;
+  background-color: #019267;
+  border-radius:1.5rem;
+}
+.update-todo {
   width: 100%;
   padding: 0 1.8rem;
   border: 0;
   border-radius: 0.5rem;
   outline: none;
   background-color: transparent;
+}
+
+.todo-content{
+  display: inline-block;
+  width: 400px;
+  word-wrap: break-word;
 }

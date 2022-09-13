@@ -1,22 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { updateTodoItem } from '../../features/todos/toDoSlice';
+
 import "./style/Todos.css";
 
-const ToDoUpdate = ({ todo }) => {
-    const updateTodoRef = React.useRef(null);
-    const [errorShow, setErrorShow] = useState(false);
+const ToDoUpdate = ({ todo, setErrorShow }) => {
+    const [toDoContent, setToDoContent] = useState(todo.content);
     const dispatch = useDispatch();
-    const updateToDo = () => {
-        todo = { ...todo, content: updateTodoRef.current.value }
-        return todo.content ? dispatch(updateTodoItem(todo)) : setErrorShow(true);
+    const handleChange = (e) => {
+        setErrorShow(false);
+        setToDoContent(e.target.value)
     }
-    useEffect(() => {
-        updateTodoRef.current.focus();
-    }, [updateTodoRef]);
+    const updateToDo = () => {
+        if (toDoContent.length >= 3) {
+            todo = { ...todo, content: toDoContent };
+            dispatch(updateTodoItem(todo));
+        } else {
+            setErrorShow(true);
+        }
+    }
     return (
         <>
-            <input ref={updateTodoRef} onChange={()=>setErrorShow(false)} type="text" name='update_todo' className='update-todo' />
+            <input value={toDoContent} onChange={(e) =>handleChange(e)} type="text" name='update_todo' className='update-todo' />
             <button className='btn-update todo-right-btn' onClick={updateToDo}><i className="fa-solid fa-floppy-disk"></i></button>
         </>
     )
