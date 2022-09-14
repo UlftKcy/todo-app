@@ -13,6 +13,6 @@ const Dashboard = ({setUsername,username}) => {
       <Todos/>
     </div>
   )
-}
+};
 
 export default Dashboard;

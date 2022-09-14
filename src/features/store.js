@@ -5,6 +5,6 @@ import ToDoSlice from "./todos/toDoSlice";
 
 export default configureStore({
     reducer:{
-      todos:ToDoSlice,  
+      todos:ToDoSlice,
     },
 })

@@ -31,6 +31,7 @@ const toDoSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
+        // fetchTodoItems 
         builder.addCase(fetchTodoItems.pending, (state, action) => {
             state.loading = true;
             state.error = "";
@@ -43,7 +44,7 @@ const toDoSlice = createSlice({
             state.loading = false;
             state.error = "Error fetching todo list";
         });
-
+        // createTodoItem 
         builder.addCase(createTodoItem.pending, (state, action) => {
             state.loading = true;
             state.error = "";
@@ -57,7 +58,7 @@ const toDoSlice = createSlice({
             state.loading = false;
             state.error = "Error create todo";
         });
-
+        // updateTodoItem
         builder.addCase(updateTodoItem.pending, (state, action) => {
             state.loading = true;
             state.error = "";
@@ -75,7 +76,7 @@ const toDoSlice = createSlice({
             state.loading = false;
             state.error = "Error update todo";
         });
-
+        // deleteTodoItem
         builder.addCase(deleteTodoItem.pending, (state, action) => {
             state.loading = true;
             state.error = "";
@@ -90,6 +91,5 @@ const toDoSlice = createSlice({
             state.error = "Error delete todo";
         });
     }
-})
-
+});
 export default toDoSlice.reducer;
