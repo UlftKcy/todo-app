@@ -19,7 +19,6 @@ const ToDoInput = () => {
     setToDoItem({ ...toDoItem, content: value });
   }
   const AddToDo = () => {
-
     if(toDoItem.content.length>=3){
       dispatch(createTodoItem(toDoItem));
       toDoItem.content="";

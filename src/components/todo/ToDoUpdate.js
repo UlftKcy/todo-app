@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { updateTodoItem } from '../../features/todos/toDoSlice';
-
 import "./style/Todos.css";
 
 const ToDoUpdate = ({ todo, setErrorShow }) => {
