@@ -5,7 +5,7 @@ const Navbar = ({ username ,setUsername}) => {
   let navigate = useNavigate();
   const handleLogout = ()=>{
     localStorage.removeItem("username");
-    navigate("/login");
+    navigate("/");
     setUsername(null);
   }
   return (

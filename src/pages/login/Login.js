@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 
-const Login = () => {
+const Login = ({setUsername}) => {
     let navigate = useNavigate();
     const usernameInput = useRef(null);
     const [errorShow,setErrorShow] = useState(false);
@@ -10,7 +10,7 @@ const Login = () => {
         e.preventDefault();
         const username = usernameInput.current?.value;
         if(username !== ""){
-            localStorage.setItem('username', JSON.stringify(username));
+            setUsername(localStorage.setItem('username', JSON.stringify(username)));
             navigate("/");
         }else{
             setErrorShow(true);
