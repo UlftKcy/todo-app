@@ -16,11 +16,12 @@ const ToDoInput = () => {
   const handleNewToDo = (e) => {
     setErrorShow(false);
     const { value } = e.target;
-    setToDoItem({ ...toDoItem, content: value });
+    setToDoItem({ ...toDoItem, content: value});
   }
   const AddToDo = () => {
-    if(toDoItem.content.length>=3){
-      dispatch(createTodoItem(toDoItem));
+    let toDoContent = toDoItem.content.trim();
+    if(toDoContent.length>=3){
+      dispatch(createTodoItem({ ...toDoItem, content: toDoContent}));
       toDoItem.content="";
     }else{
       setErrorShow(true);
