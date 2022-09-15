@@ -1,11 +1,9 @@
 .navbar{
-    background-color: #0353a4;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    color: #ffff;
     font-weight: bold;
 }
 .navbar-items{
@@ -14,9 +12,18 @@
 .navbar-items li{
     margin-left: 1rem;
 }
+.brand{
+    letter-spacing: 3px;
+    border: 2px solid #ddd;
+    padding: 0.2rem 0.4rem;
+}
 .logout{
     background-color: transparent;
     border: 0;
-    color: #ffff;
     font-size: 1.2rem;
+    color: #cc2763;
+}
+
+.logout:hover{
+    cursor: pointer;
 }

@@ -6,16 +6,24 @@ import Login from '../pages/login/Login';
 
 const AppRouter = () => {
   const [username, setUsername] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
+    // set username 
     const loggedInUser = localStorage.getItem("username");
     const foundUser = JSON.parse(loggedInUser);
     setUsername(foundUser);
-  }, [username])
+    // add darkmode class
+    if (darkMode) {
+      document.body.classList.add("darkmode")
+    } else {
+      document.body.classList.remove("darkmode")
+    }
+  }, [username, darkMode])
 
   return (
     <Router>
-      <Navbar username={username} setUsername={setUsername} />
+      <Navbar username={username} setUsername={setUsername} setDarkMode={setDarkMode} darkMode={darkMode} />
       <Routes>
         {username ? <Route path='/' element={<Dashboard />} /> :
           <Route path='/' element={<Login setUsername={setUsername} />} />}

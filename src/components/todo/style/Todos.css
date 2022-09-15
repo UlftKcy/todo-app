@@ -32,7 +32,7 @@
 #btn-add-todo {
   border: 0;
   padding: 0.8rem 1.5rem;
-  background-color: #019267;
+  background-color: #cc2763;
   color: #ffff;
   border-radius: 1rem;
   cursor: pointer;
@@ -41,7 +41,7 @@
 }
 
 #btn-add-todo:hover {
-  background-color: #069e70;
+  background-color: #c6426e;
 }
 
 #btn-add-todo i {
@@ -66,14 +66,10 @@
   display: flex;
   align-items: center;
   padding: 0.7rem;
-  border: 1px solid #8ba4bc;
+  border: 1px solid rgb(177, 176, 176);
   border-radius: 0.8rem;
   margin: 10px 0;
   transition: all ease-in-out;
-}
-
-.todo-card:hover {
-  background-color: #dce2ed;
 }
 
 .todo-right {
@@ -95,14 +91,15 @@
 }
 
 .btn-edit {
-  color: #0353a4;
+  color: #eb854b;
 }
-.btn-edit i{
+
+.btn-edit i {
   margin-right: 0.5rem;
 }
 
 .btn-del {
-  color: #0353a4;
+  color: #c6426e;
 }
 
 .btn-update {
@@ -115,6 +112,10 @@
 
 .todo-check {
   margin-right: 1.5rem;
+}
+
+.incompleted:hover {
+  cursor: pointer;
 }
 
 .incompleted:after {
@@ -143,8 +144,12 @@
   margin-right: 0.5rem;
   text-align: center;
   color: #ffff;
-  background-color: #019267;
+  background-color: #cc2763;
   border-radius: 1.5rem;
+}
+
+.completed:hover {
+  cursor: pointer;
 }
 
 .update-todo {
@@ -158,12 +163,13 @@
 
 .todo-content {
   display: inline-block;
-  inline-size: 250px; 
+  inline-size: 250px;
   overflow: hidden;
   word-wrap: break-word;
   font-size: 1rem;
 }
-.todo-completed{
+
+.todo-completed {
   text-decoration: line-through;
   color: rgb(116, 113, 113);
 }

@@ -1,6 +1,6 @@
 .login-wrapper {
   width: 30%;
-  border: 1px solid #0353a4;
+  border: 1px solid rgb(177, 176, 176);
   border-radius: 8px;
   padding: 1rem;
   margin: 20px auto;
@@ -49,13 +49,13 @@
     from(#0353a4),
     to(#0353a4)
   );
-  background: linear-gradient(to right, #0353a4, #0353a4);
+  background: linear-gradient(to right, #cc2763, #a71a4d);
   background-repeat: no-repeat;
   background-size: 0 100%;
   -webkit-transition: background-size 0.3s 0s;
   transition: background-size 0.3s 0s;
   color: #ffff;
-  background-color: #0466c8;
+  background-color: #c6426e;
   text-decoration: none;
   border-radius: 3rem;
   font-size: 0.8rem;
@@ -74,7 +74,6 @@ i {
 
 .form-label {
   font-weight: bold;
-  color: #0466c8;
   font-size: 0.7rem;
 }
 .validation{

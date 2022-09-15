@@ -38,10 +38,10 @@ const ToDoItem = ({ todo_items }) => {
                   </span>
                   <span className={todo_item.isCompleted ? 'todo-content todo-completed' : 'todo-content'}>{todo_item.content}</span>
                 </div>
-                {!todo_item.isCompleted && <div className='todo-right'>
-                  <button className='btn-edit todo-right-btn' onClick={() => handleUpdate(todo_item.id)}><i className="fa-solid fa-pen-to-square"></i></button>
+                <div className='todo-right'>
+                  <button className='btn-edit todo-right-btn' disabled={todo_item.isCompleted} onClick={() => handleUpdate(todo_item.id)}><i className="fa-solid fa-pen-to-square"></i></button>
                   <button className='btn-del todo-right-btn' onClick={() => dispatch(deleteTodoItem(todo_item.id))}><i className="fa-solid fa-trash"></i></button>
-                </div>}
+                </div>
               </>
             }
           </div>
