@@ -72,6 +72,12 @@
   transition: all ease-in-out;
 }
 
+@media only screen and (max-width:600px) {
+  .todo-card{
+      width:100%;
+  }
+}
+
 .todo-right {
   width: 20%;
   text-align: center;
